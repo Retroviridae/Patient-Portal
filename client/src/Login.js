@@ -8,7 +8,7 @@ import { Route, Routes,useNavigate,useParams } from "react-router"
 function Login( {handleLogin} ){
     let navigate= useNavigate();
     const [form,setForm]=useState({
-        "username": "Updog",
+        "username": "KateSkate",
         "password": "1234"
       })
     function handleFormChange(e){
@@ -28,7 +28,7 @@ function Login( {handleLogin} ){
           
           <Row className='mt-2'>
             <Form.Label column lg={2}>
-              Email
+              Username
             </Form.Label>
             <Col xs={7}>
               <Form.Control type="username" placeholder="username" name='username' value={form.username} onChange={handleFormChange}/>

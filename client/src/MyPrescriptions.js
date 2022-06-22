@@ -15,7 +15,7 @@ function MyPrescriptions( { me } ){
             <h1>Prescriptions:</h1>
             {scripts.map(script=>{
                return(
-                <Card style={{ width: '18rem' }}>
+                <Card key={script.id} style={{ width: '18rem' }}>
                 <Card.Body>
                     <Card.Title>{script.name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{script.dose}</Card.Subtitle>

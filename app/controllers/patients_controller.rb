@@ -8,7 +8,7 @@ class PatientsController < ApplicationController
 
     def show
         patient = find_patient
-        render json: patient, status: 200
+        render json: patient, status: 200, include: ['appointments', 'appointments.provider','prescriptions']
     end
 
     def create

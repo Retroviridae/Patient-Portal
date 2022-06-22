@@ -19,6 +19,7 @@ function Header( {handleLogout, me } ){
                 <NavLink href='/'>Home</NavLink>
                 {/* <NavLink href='/login'>Login</NavLink>
                 <NavLink onClick={handleLogout}>Logout</NavLink> */}
+                {me.id?<NavLink href='/appointments'>My Appointments</NavLink>:null}
                 {me.id?<NavLink href='/prescriptions'>My Prescriptions</NavLink>:null}
                 {me.id?<NavLink onClick={handleLogout}>Logout</NavLink>:<NavLink href='/login'>Login</NavLink>}
                 </Nav>

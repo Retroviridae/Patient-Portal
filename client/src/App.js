@@ -1,14 +1,16 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { Route, Routes } from "react-router"
+import { Route, Routes,useNavigate,useParams } from "react-router"
 import Header from './Header';
 import Test from './Test';
 import Home from './Home';
 import Login from './Login';
 import Me from './Me';
 import MyPrescriptions from './MyPrescriptions';
+import MyAppointments from './MyAppointments';
 
 function App() {
+  let navigate= useNavigate();
   const [me,setMe]= useState({
     "id": "",
     "username": "",
@@ -27,6 +29,7 @@ function App() {
   },[])
 
   function handleLogout(){
+    navigate('/')
     fetch("/logout", {
       method: "DELETE",
     }).then(setMe({
@@ -52,8 +55,9 @@ function App() {
       <Routes>
         <Route path="/test" element={<Test />} />
         <Route path="/login" element={<Login handleLogin={handleLogin} />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home me={me} />} />
         <Route path="/prescriptions" element={<MyPrescriptions me={me} />} />
+        <Route path="/appointments" element={<MyAppointments me={me} />} />
 
       </Routes>
     </div>

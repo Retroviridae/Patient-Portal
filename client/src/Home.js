@@ -6,6 +6,7 @@ function Home( { me }){
     return (
         <header>
             Home
+            <p>pt.id: {me.id?"logged in":'not'} </p>
         </header>
     )
 }
