@@ -15,9 +15,9 @@ p5 = Patient.create(name: "Cody", gender:"M", age: 30, height: 78, weight: 200, 
 
 puts "creating providers"
 
-d1 = Provider.create(name: "Tori, PA.", specialty:"surgery", office_location: "123 place St.")
-d2 = Provider.create(name: "Dr. Kelly", specialty:"ortho", office_location: "Bee Caves")
-d3 = Provider.create(name: "Dr. Shane", specialty:"FM", office_location: "Walgreens")
+d1 = Provider.create(name: "Tori P., P.A-C", specialty:"surgery", office_location: "123 place St.")
+d2 = Provider.create(name: "Kelly C., MD", specialty:"ortho", office_location: "Bee Caves")
+d3 = Provider.create(name: "Shane K., MD", specialty:"FM", office_location: "Walgreens")
 
 puts "creating appointments"
 

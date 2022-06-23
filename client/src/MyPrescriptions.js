@@ -10,6 +10,13 @@ function MyPrescriptions( { me } ){
         .then(data=>setScripts(data.prescriptions))
     }}
     ,[me])
+
+    function handleDelete(e){
+        fetch(`/prescriptions/${e.target.name}`, {
+          method: "DELETE",
+        }).then(setScripts(scripts.filter(script=>script.id !==parseInt(e.target.name))))
+      }
+
     return (
         <header>
             <h1>Prescriptions:</h1>
@@ -25,7 +32,7 @@ function MyPrescriptions( { me } ){
                     <Card.Text>
                         {script.provider}
                     </Card.Text>
-                    <Button variant="primary">I don't take this anymore.</Button>
+                    <Button name={script.id} onClick={handleDelete} variant="primary">I don't take this anymore.</Button>
                 </Card.Body>
                 </Card>) 
 

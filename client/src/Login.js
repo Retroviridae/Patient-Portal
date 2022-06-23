@@ -17,7 +17,6 @@ function Login( {handleLogin} ){
     function handleSubmit(e){
         e.preventDefault()
         handleLogin(form)
-        navigate('/')
           setForm({
             "username": "",
             "password": ""
