@@ -6,8 +6,14 @@ import Col from 'react-bootstrap/Col';
 
 function Home(){
 
+  const dbReset = ()=>{
+    fetch('/reset')
+    .then(resp=> resp.json())
+    .then(data => console.log(data))}
+
     return (
         <header>
+          <Button onClick={dbReset} variant="danger">Reset Database</Button>
              {/* <Row className='mt-2'>
         <Form.Label column lg={2}>
           Date
