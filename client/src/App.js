@@ -68,7 +68,7 @@ function App() {
       <Header handleLogout={handleLogout} me={me} />
       {errors}
       <Routes>
-        <Route path="/providers" element={<Providers/>} />
+        <Route path="/provider" element={<Providers/>} />
         <Route path="/login" element={<Login handleLogin={handleLogin} />} />
         <Route path="/" element={<Home />} />
         <Route path="/prescriptions" element={<MyPrescriptions me={me} />} />

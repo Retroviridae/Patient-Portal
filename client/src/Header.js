@@ -27,7 +27,7 @@ function Header( {handleLogout, me } ){
             </Navbar.Brand>
                 <Nav className="me-auto" >
                 <NavLink href='/'>Home</NavLink>
-                <NavLink href='/providers'>Providers</NavLink>
+                <NavLink href='/provider'>Providers</NavLink>
                 {/* <NavLink href='/login'>Login</NavLink>
                 <NavLink onClick={handleLogout}>Logout</NavLink> */}
                 {me.id?<NavLink href='/appointments'>My Appointments</NavLink>:null}
