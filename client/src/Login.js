@@ -47,6 +47,10 @@ function Login( {handleLogin} ){
           <Button onSubmit={handleSubmit} variant="primary" type="submit">
             Login
           </Button>
+          <h1>Test Users:</h1>
+          <p>username: "KateSkate", password: "1234"</p>
+          <p>username: "JoshMadMan", password: "1234"</p>
+          <p>username: "Updog", password: "1234"</p>
         </form>
       )
 }
