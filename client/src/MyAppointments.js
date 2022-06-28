@@ -30,7 +30,7 @@ function MyAppointments( { me } ){
       }
     return (
         <header>
-            <Button href='/appointments/new' variant="primary">New Appointment</Button>
+            <Button href='/appointment/new' variant="primary">New Appointment</Button>
             <h1>Appointments:</h1>
             {appointments.map(appointment=>{
                return(
