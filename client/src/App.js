@@ -68,13 +68,13 @@ function App() {
       <Header handleLogout={handleLogout} me={me} />
       {errors}
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/provider" element={<Providers/>} />
         <Route path="/login" element={<Login handleLogin={handleLogin} />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/prescriptions" element={<MyPrescriptions me={me} />} />
-        <Route path="/appointments" element={<MyAppointments me={me} />} />
-        <Route path="/appointments/new" element={<NewAppointment />} />
-        <Route path="/appointments/edit/:id" element={<EditAppointment />} />
+        <Route path="/prescription" element={<MyPrescriptions me={me} />} />
+        <Route path="/appointment" element={<MyAppointments me={me} />} />
+        <Route path="/appointment/new" element={<NewAppointment />} />
+        <Route path="/appointment/edit/:id" element={<EditAppointment />} />
       </Routes>
     </div>
   );
