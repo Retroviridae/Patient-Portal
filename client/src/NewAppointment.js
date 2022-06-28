@@ -28,7 +28,7 @@ function NewAppointment(){
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(form)
       }).then(resp => resp.json())
-      .then(data => navigate("/appointments"))
+      .then(data => navigate("/appointment"))
         } 
 
     return (

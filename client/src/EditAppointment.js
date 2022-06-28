@@ -31,7 +31,7 @@ function EditAppointment(){
             .then((r) => r.json())
             .then(data => {
                 setForm("")
-                navigate('/appointments')
+                navigate('/appointment')
                 console.log(data)});
         } 
 

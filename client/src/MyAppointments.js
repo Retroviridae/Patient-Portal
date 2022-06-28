@@ -26,7 +26,7 @@ function MyAppointments( { me } ){
       }
 
       function handleEdit(e){
-        navigate(`/appointments/edit/${e.target.name}`)
+        navigate(`/appointment/edit/${e.target.name}`)
       }
     return (
         <header>
