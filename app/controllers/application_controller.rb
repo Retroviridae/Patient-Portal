@@ -5,6 +5,11 @@ class ApplicationController < ActionController::API
     rescue_from ActiveRecord::RecordInvalid, with: :invalid
 
     def create
+        Patient.destroy_all
+        Provider.destroy_all
+        Appointment.destroy_all
+        Prescription.destroy_all
+        User.destroy_all
         puts "creating Patients"
 
         p1 = Patient.create(name: "Kate", gender:"F", age: 19, height: 72, weight: 145, email: "ellie@email.com")
